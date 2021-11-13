@@ -3,11 +3,12 @@
 ## How To Setup : 
 
 ### pré-requis :
+
 - machine rocky linux with internet access
 
 ### docker
 
-```
+```bash
 dnf update -y
 
 reboot
