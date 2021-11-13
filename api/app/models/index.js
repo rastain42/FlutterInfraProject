@@ -7,8 +7,7 @@ const {
     MONGO_PASSWORD,
     MONGO_HOSTNAME,
     MONGO_PORT,
-    MONGO_DB,
-    MONGO_URL
+    MONGO_DB
 } = process.env;
 
 const db = {};

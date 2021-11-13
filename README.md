@@ -5,8 +5,10 @@
 ### pré-requis :
 
 - machine rocky linux with internet access
+- docker, docker-compose
+- git, curl
 
-### docker
+### install des paquets nécessaires
 
 ```bash
 dnf update -y
@@ -23,11 +25,15 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 
 sudo chmod +x /usr/local/bin/docker-compose
 
+sudo dnf install -y curl git
+```
+
+```bash
 cd /home/admin
 
 git clone https://github.com/rastain42/FlutterInfraProject
 
-chmod +x /FlutterInfraProject/api/app/wait-for.sh
+chmod +x FlutterInfraProject/api/app/wait-for.sh
 
 docker-compose -f docker-compose.yml up -d
 
