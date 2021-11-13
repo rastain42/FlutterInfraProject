@@ -27,7 +27,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo dnf install -y curl git
 ```
-
+### download et lancement du projet
 ```bash
 cd /home/admin
 
