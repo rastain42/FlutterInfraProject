@@ -7,7 +7,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
     volumes:
       dbdata:/data/db
-    network:
+    networks:
       app-network
 
   mongo-express:
