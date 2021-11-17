@@ -3,12 +3,12 @@ services:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: $MONGO_USERNAME
-      MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
+      - MONGO_INITDB_ROOT_USERNAME: $MONGO_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
     volumes:
-      dbdata:/data/db
+      - mongoData:/data/db
     networks:
-      app-network
+      - appNet
 
   mongo-express:
     image: mongo-express
@@ -16,10 +16,10 @@ services:
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: $MONGO_USERNAME
-      ME_CONFIG_MONGODB_ADMINPASSWORD: $MONGO_PASSWORD
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      - ME_CONFIG_MONGODB_ADMINUSERNAME: $MONGO_USERNAME
+      - ME_CONFIG_MONGODB_ADMINPASSWORD: $MONGO_PASSWORD
+      - ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      - ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
 
   
   nodejs:
@@ -42,11 +42,11 @@ services:
       - .:/home/admin/app
       - node_modules:/home/admin/api/app/node_modules
     networks:
-      - app-network
+      - appNet
     command: ./wait-for.sh db:27017 -- /home/admin/api/app/node_modules/.bin/nodemon app.js
 
 networks:
-  app-network:
+  appNet:
     driver: bridge
 
 volumes:
