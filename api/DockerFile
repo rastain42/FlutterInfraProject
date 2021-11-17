@@ -10,7 +10,7 @@ USER node
 
 RUN npm install
 
-COPY --chown=admin:admin . .
+COPY --chown=admin . .
 
 EXPOSE 8080
 

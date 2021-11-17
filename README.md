@@ -30,6 +30,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo usermod -aG docker $USER
 
 sudo dnf install -y curl git
+
+logout
 ```
 
 ```bash
