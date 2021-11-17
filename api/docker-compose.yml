@@ -2,11 +2,12 @@ services:
   mongo:
     image: mongo
     restart: always
+    env_file: .env
     environment:
       - MONGO_INITDB_ROOT_USERNAME: $MONGO_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
     volumes:
-      - mongoData:/data/db
+      - dbdata:/data/db
     networks:
       - appNet
 
