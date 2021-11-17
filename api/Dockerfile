@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-RUN mkdir -p /home/admin/api/app/node_modules && chown -R admin:admin /home/admin/api/app
+RUN mkdir -p /home/admin/api/app/node_modules && chown -R admin /home/admin/api/app
 
 WORKDIR /home/admin/api/app
 
