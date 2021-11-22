@@ -9,7 +9,8 @@ services:
     volumes:
       - dbdata:/data/db
     networks:
-      - appNet
+      appNet:
+        ipv4_address: 10.0.0.1
 
   mongo-express:
     image: mongo-express
@@ -21,7 +22,8 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: $MONGO_PASSWORD
       ME_CONFIG_MONGODB_URL: $MONGO_URL
     networks:
-      - appNet
+      appNet:
+        ipv4_address: 10.0.0.2
 
   nodejs:
     build:
@@ -43,11 +45,16 @@ services:
       - .:/home/admin/app
       - node_modules:/home/admin/api/app/node_modules
     networks:
-      - appNet
+      appNet:
+        ipv4_address: 10.0.0.3
 
 networks:
   appNet:
     driver: bridge
+    ipam:
+     config:
+       - subnet: 10.0.0.0/28
+         gateway: 10.0.0.14
 
 volumes:
   dbdata:
