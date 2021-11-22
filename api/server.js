@@ -21,7 +21,7 @@ db.mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
     reconnectTries: Number.MAX_VALUE,
-    reconnectInterval: 500,
+    reconnectInterval: 50,
     connectTimeoutMS: 10000,
   })
   .then(() => {
