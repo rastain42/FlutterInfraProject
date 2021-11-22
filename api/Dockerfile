@@ -1,8 +1,8 @@
 FROM node:10-alpine
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+RUN mkdir -p /home/admin/FlutterInfraProject/api/app/node_modules && chown -R node:node /home/admin/FlutterInfraProject/api/app
 
-WORKDIR /home/node/app
+WORKDIR /home/admin/api/app
 
 COPY package*.json ./
 
