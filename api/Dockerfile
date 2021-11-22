@@ -2,7 +2,7 @@ FROM node:10-alpine
 
 RUN mkdir -p /home/admin/FlutterInfraProject/api/app/node_modules && chown -R node:node /home/admin/FlutterInfraProject/api/app
 
-WORKDIR /home/admin/api/app
+WORKDIR /home/admin/FlutterInfraProject/api/app
 
 COPY package*.json ./
 
