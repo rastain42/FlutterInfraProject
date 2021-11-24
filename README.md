@@ -17,6 +17,8 @@ reboot
 
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
+sudo dnf install -y docker-ce
+
 systemctl start docker
 
 systemctl enable docker
@@ -25,7 +27,11 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 
 sudo chmod +x /usr/local/bin/docker-compose
 
+sudo usermod -aG docker $USER
+
 sudo dnf install -y curl git
+
+logout
 ```
 ### download et lancement du projet
 ```bash
@@ -34,6 +40,8 @@ cd /home/admin
 git clone https://github.com/rastain42/FlutterInfraProject
 
 chmod +x FlutterInfraProject/api/app/wait-for.sh
+
+cd FlutterInfraProject/api/
 
 docker-compose -f docker-compose.yml up -d
 
