@@ -29,5 +29,16 @@ services:
     stdin_open: true
     tty: true
 
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    env_file: .env
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: $MONGODB_USER
+      ME_CONFIG_MONGODB_ADMINPASSWORD: $MONGODB_PASSWORD
+      ME_CONFIG_MONGODB_URL: mongodb://$MONGODB_USER:$MONGODB_PASSWORD@:0.0.0.0$MONGODB_DOCKER_PORT/$MONGODB_DATABASE
+      
 volumes:
   db:
