@@ -77,9 +77,13 @@ l'évent est bien enregistré en bdd car je recois :
 ```
 en envoyant une requète GET à 192.168.140.4:6868/api/events
 
+### mongo express
+
+lorsque je me connecte à l'adresse 192.168.140.4:8081, je peux visualiser ma base de données grâce a un outil graphique
+
 ## archi
 
 - docker compose
   - nodeJs api
   - mongo db
- # - mongo express
+  - mongo express
