@@ -1,5 +1,13 @@
 # FlutterInfraProject
 
+#### description
+
+Voici comment setup l'api CRUD de notre application,
+l'appli flutter envoie des requètes a ce serveur pour récuperer des évents à afficher sur un calendrier,
+créer des évents, les modifier ou les supprimer
+on utilise mongo express pour avoir un accès graphique à notre base de données mongo.
+Le tout étant compris dans un docker compose qui place ces processus dans un réseau bridge
+
 ## How To Setup : 
 
 ### pré-requis :
@@ -77,9 +85,13 @@ l'évent est bien enregistré en bdd car je recois :
 ```
 en envoyant une requète GET à 192.168.140.4:6868/api/events
 
+### mongo express
+
+lorsque je me connecte à l'adresse 192.168.140.4:8081, je peux visualiser ma base de données grâce a un outil graphique
+
 ## archi
 
 - docker compose
   - nodeJs api
   - mongo db
- # - mongo express
+  - mongo express
