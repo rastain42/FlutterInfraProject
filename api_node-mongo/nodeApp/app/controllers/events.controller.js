@@ -5,8 +5,6 @@ const Event = db.events;
 exports.create = (req, res) => {
   console.log(req.body)
     // Validate request
-    console.log("body:::::::::")
-    console.log(req.body)
     if (!req.body.title) {
       res.status(400).send({ message: "Title can not be empty!" });
       return;
