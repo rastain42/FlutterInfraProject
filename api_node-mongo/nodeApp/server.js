@@ -31,7 +31,7 @@ db.mongoose
     process.exit(); 
   });
 
-require("./app/routes/event.routes")(app);
+require("./app/routes/events.routes")(app);
 require("dotenv").config();
 
 // set port, listen for requests
