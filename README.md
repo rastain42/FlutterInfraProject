@@ -39,18 +39,15 @@ cd /home/admin
 
 git clone https://github.com/rastain42/FlutterInfraProject
 
-chmod +x FlutterInfraProject/api/app/wait-for.sh
+cd FlutterInfraProject/api_node-mongo/
 
-cd FlutterInfraProject/api/
-
-docker-compose -f docker-compose.yml up -d
+docker-compose up -d
 
 ```
 
 ## archi
 
 - docker compose
-  - node js api
-    - nodemon : reload code without having to restart the app
+  - nodeJs api
   - mongo db
-  - mongo express
+ # - mongo express
