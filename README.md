@@ -5,8 +5,8 @@
 Voici comment setup l'api CRUD de notre application,
 l'appli flutter envoie des requètes a ce serveur pour récuperer des évents à afficher sur un calendrier,
 créer des évents, les modifier ou les supprimer
-on utilise mongo express pour avoir un accès graphique à notre base de données mongo.
-Le tout étant compris dans un docker compose qui place ces processus dans un réseau bridge
+on utilise mongo express pour avoir un accès graphique à notre base de données mongo.<br>
+Le tout étant compris dans un docker compose qui place ces processus dans un réseau bridge<br>
 
 ## How To Setup : 
 
