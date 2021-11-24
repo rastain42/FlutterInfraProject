@@ -1,2 +1,33 @@
-"dependencies": {
-    "dotenv": "^10.0.0",
+{
+    "name": "flutterinfraproject",
+    "version": "1.0.0",
+    "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/rastain42/FlutterInfraProject.git"
+    },
+    "keywords": [
+      "nodejs",
+      "express",
+      "mongodb",
+      "rest",
+      "api"
+    ],
+    "author": "romain michel",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/rastain42/FlutterInfraProject/issues"
+    },
+    "homepage": "https://github.com/rastain42/FlutterInfraProject#readme",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "mongoose": "^6.0.12",
+      "dotenv": "^10.0.0"
+    }
+
+  }
