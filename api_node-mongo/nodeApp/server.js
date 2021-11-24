@@ -16,11 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./app/models");
 db.mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     reconnectTries: Number.MAX_VALUE,
-    reconnectInterval: 50,
+    reconnectInterval: 150,
     connectTimeoutMS: 10000,
   })
   .then(() => {
