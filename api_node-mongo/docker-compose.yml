@@ -15,9 +15,9 @@ services:
   app:
     depends_on:
       - mongodb
-    build: ./nodeApp
+    build: nodeApp
     restart: unless-stopped
-    env_file: ./.env
+    env_file: .env
     ports:
       - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
     environment:
