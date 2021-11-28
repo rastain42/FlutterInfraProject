@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+En cours de développement, celle-ci pourras a l'avenir envoyer une prévisualisation d'un calendrier avec gestionnaire d'évènements ... 
+Pour l'instant elle peut envoyer des requêtes a L'API.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
